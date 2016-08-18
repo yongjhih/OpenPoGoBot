@@ -1,0 +1,10 @@
+openpogobot:
+  build: .
+  volumes:
+    - ./config:/usr/src/app/config
+    - ./data:/usr/src/app/data
+  stdin_open: true
+  tty: true
+  ports:
+    - "8000:8000"
+  command: ["config/config.yml"]
